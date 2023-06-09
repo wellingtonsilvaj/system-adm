@@ -1,0 +1,33 @@
+<!-- Inicio Navbar -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <div class="bars">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <img src="/images/logo/logo.png" alt="Celke" class="logo">
+    </div>
+
+    <div class="navbar-content">
+      
+
+        <div class="avatar">
+            {{#if profile.image}}
+                    <img src="/images/users/{{profile.image}}" alt="Usuario" width="40">
+                {{else}}
+                    <img src="/images/users/user.jpg" alt="Usuario" width="40">
+                {{/if}}
+            
+            <div class="dropdown-menu setting">
+                <a href="/profile" class="item">
+                    <span class="fa-solid fa-user"></span> Perfil
+               </a> 
+
+                <a href="/login/logout" class="item">
+                    <span class="fa-solid fa-arrow-right-from-bracket"></span> Sair
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Fim Navbar -->

@@ -1,0 +1,40 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">EDITAR</span>
+            <div class="top-list-right">
+                <a href="/profile" class="btn-info">Perfil</a>
+               
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/profile/edit" method="post">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Nome:<span class="text-danger">*</span></label>
+                                <input type="text" name="name" id="name" class="input-adm" placeholder="Nome completo" value="{{data.name}}">
+                            </div>
+                        </div>
+                            <div class="row-input">
+                                <div clas="column">
+                             <label class="title-input">E-mail:<span class="text-danger">*</span></label>
+                                <input type="email" name="email" id="email" class="input-adm"
+                                    placeholder="Melhor e-mail" value="{{data.email}}">
+                            </div>
+                            </div>
+
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-warning" value="Editar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

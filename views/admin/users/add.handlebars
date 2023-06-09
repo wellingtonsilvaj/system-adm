@@ -1,0 +1,63 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">CADASTRAR</span>
+            <div class="top-list-right">
+                <a href="/users?page=1" class="btn-info">Listar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/users/add" method="post">
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Nome:<span class="text-danger">*</span></label>
+                                <input type="text" name="name" id="name" class="input-adm" placeholder="Nome completo" value="{{data.name}}">
+                            </div>
+                        </div>
+                            <div class="row-input">
+                                <div clas="column">
+                             <label class="title-input">E-mail:<span class="text-danger">*</span></label>
+                                <input type="email" name="email" id="email" class="input-adm"
+                                    placeholder="Melhor e-mail" value="{{data.email}}">
+                            </div>
+                            </div>
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Senha:<span class="text-danger">*</span></label>
+                                <input type="password" name="password" id="password" class="input-adm" placeholder="Digite a senha" value="{{data.password}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Situação:<span class="text-danger">*</span></label>
+                                <select name="situationId" id="situationId" class="input-adm">
+                                    <option value={{#if data.situation.dataValues.id}}{{data.situation.dataValues.id}}{{else}}""{{/if}} hidden="hidden" selected="selected">
+                                        {{#if data.situation.dataValues.id}}
+                                            {{data.situation.dataValues.nameSituation}}
+                                        {{else}}
+                                        Selecione
+                                        {{/if}}
+                                        </option>
+                                    {{#each data.situations}}
+                                        <option value="{{dataValues.id}}">{{dataValues.nameSituation}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                           
+                        </div>
+
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-success" value="Cadastrar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

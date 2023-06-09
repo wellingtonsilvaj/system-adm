@@ -1,0 +1,67 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">PERFIL</span>
+            <div class="top-list-right">
+                <a href="/profile/edit"  class="btn-warning">Editar</a>
+                <a href="/profile/edit-image" class="btn-warning">Editar Foto</a>
+                <a href="/profile/edit-password" class="btn-warning">Editar Senha</a>
+
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+            
+            <div class="view-det-adm">
+                <span class="view-adm-title">IMAGEM: </span>
+                <span class="view-adm-info">
+                    {{#if user.dataValues.image}}
+                        <img src="/images/users/{{user.dataValues.image}}" class="view-image-user">
+                    {{else}}
+                        <img src ="/images/users/user.jpg" class="view-image-user">
+                    {{/if}}
+                </span>
+            </div>
+            
+            <div class="view-det-adm">
+                <span class="view-adm-title">ID: </span>
+                <span class="view-adm-info">{{user.dataValues.id}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">NOME: </span>
+                <span class="view-adm-info">{{user.dataValues.name}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">E-MAIL: </span>
+                <span class="view-adm-info">{{user.dataValues.email}}</span>
+            </div>
+
+           <!-- <div class="view-det-adm">
+                <span class="view-adm-title">IMAGEM: </span>
+                <span class="view-adm-info">{{user.dataValues.image}}</span>
+            </div>-->
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">SITUAÇÃO: </span>
+                <span class="view-adm-info">
+                    <a href="/situations/view/{{user.dataValues.situationId}}">
+                        {{user.situation.dataValues.nameSituation}}
+                    </a>
+                </span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Cadastrado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime user.dataValues.createdAt}}{{/formatDateTime}}
+                </span>
+            </div>
+            </div>
+        </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

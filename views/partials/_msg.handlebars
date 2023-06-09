@@ -1,0 +1,25 @@
+<div class="msg-alert">
+    <!-- Verificar se existe valor na variável global success_msg -->
+    {{#if success_msg}}
+    <!-- Imprimir o valor da variável global success_msg -->
+    <p class="alert-success">{{{success_msg}}}</p>
+    {{/if}}
+
+    <!-- Verificar se existe valor na variável global warning_msg -->
+    {{#if warning_msg}}
+    <!-- Imprimir o valor da variável global warning_msg -->
+    <p class="alert-warning">{{{warning_msg}}}</p>
+    {{/if}}
+
+    <!-- Verificar se existe valor na variável global danger_msg -->
+    {{#if danger_msg}}
+    <!-- Imprimir o valor da variável global danger_msg -->
+    <p class="alert-danger">{{{danger_msg}}}</p>
+    {{/if}}
+
+    <!-- Verificar se existe valor na variável global error_msg -->
+    {{#if error_msg}}
+    <!-- Imprimir o valor da variável global error_msg -->
+    <p class="alert-danger">{{{error_msg}}}</p>
+    {{/if}}
+</div>

@@ -1,0 +1,42 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">Visualizar</span>
+            <div class="top-list-right">
+                <a href="/situations?page=1" class="btn-info">Listar</a>
+                <a href="/situations/edit/{{situation.dataValues.id}}" class="btn-warning">Editar</a>
+                <a href="/situations/delete/{{situation.dataValues.id}}" class="btn-danger" onclick="return confirm('TEM CERTEZA QUE DESEJA EXCLUIR ESTE REGISTRO?')">Apagar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+            <div class="view-det-adm">
+                <span class="view-adm-title">ID: </span>
+                <span class="view-adm-info">{{situation.dataValues.id}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Nome: </span>
+                <span class="view-adm-info">{{situation.dataValues.nameSituation}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Cadastrado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime situation.dataValues.createdAt}}{{/formatDateTime}}
+                </span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Editado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime situation.dataValues.updatedAt}}{{/formatDateTime}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

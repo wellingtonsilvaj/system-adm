@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/images/icon/favicon.ico">
+    <!-- Incluir os icones do font-awesome da CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/custom_adm.css">
+
+    <title>WJ - Administrativo</title>
+</head>
+
+<body>
+
+    <!-- Carregar o cabeçalho -->
+    {{>_header}}
+
+    <!-- Inicio Conteudo -->
+    <div class="content">
+
+        <!-- Carregar a sidebar -->
+        {{>_sidebar}}
+
+        <!-- Carregar o conteúdo da página -->
+        {{{body}}}
+
+    </div>
+    <!-- Fim Conteudo -->
+
+    <script src="/js/custom_adm.js"></script>
+
+</body>
+
+</html>

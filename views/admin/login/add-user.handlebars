@@ -1,0 +1,35 @@
+<div class="container-login">
+    <div class="wrapper-login">
+        <div class="title">
+            <span>Novo Usuário</span>
+        </div>
+
+        <!-- Imprimir as mensagens que estão na sessão -->
+        {{>_msg}}
+        
+        <!-- Formulário para cadastrar novo usuário -->
+        <form class="form-login" action="/new-user/add-user" method="post">
+            <div class="row">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="name" id="name" placeholder="Nome completo" value="{{data.name}}">
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" value="{{data.email}}">
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Senha" value="{{data.password}}">
+            </div>
+
+            <div class="row button">
+                <input type="submit" value="Cadastrar">
+            </div>
+
+            <div class="signup-link">
+                <a href="/login">Clique aqui</a> para acessar
+            </div>
+
+        </form>
+    </div>
+</div>

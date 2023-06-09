@@ -1,0 +1,33 @@
+<div class="container-login">
+    <div class="wrapper-login">
+        <div class="title">
+            <span>Área Restrita</span>
+        </div>
+
+        <!-- Imprimir as mensagens que estão na sessão -->
+        {{>_msg}}
+
+        <form class="form-login" action="/login" method="post">
+            <div class="row">
+                <i class="fa-solid fa-user"></i>
+                <input name="email" type="text" placeholder="E-mail" required>
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-lock"></i>
+                <input name="password" type="password" placeholder="Senha" required>
+            </div>
+
+            <div class="row button">
+                <input type="submit" value="Acessar">
+            </div>
+
+            <div class="signup-link">
+                <a href="/new-user">Cadastrar</a> - <a href="/recover-password">Esqueceu a senha?</a>
+            </div>
+
+        
+
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">LISTAR</span>
+            <div class="top-list-right">
+                <a href="/situations/add" class="btn-success">Cadastrar</a>
+                <!--<button type="button" class="btn-success"><i class="fa-solid fa-square-plus"></i></button>-->
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <table class="table-list">
+            <thead class="list-head">
+                <tr>
+                    <th class="list-head-content">ID</th>
+                    <th class="list-head-content">Nome</th>
+                    <th class="list-head-content">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="list-body">
+                {{#each situations}}
+                <tr>
+                    <td class="list-body-content">{{id}}</td>
+                    <td class="list-body-content">{{nameSituation}}</td>
+                    <td class="list-body-content">
+                        <div class="dropdown-action">
+                            <button onclick="actionDropdown({{id}})" class="dropdown-btn-action">Ações</button>
+                            <div id="actionDropdown{{id}}" class="dropdown-action-item">
+                                <a href="/situations/view/{{id}}">Visualizar</a>
+                                <a href="/situations/edit/{{id}}">Editar</a>
+                                <a href="/situations/delete/{{id}}" onclick="return confirm ('TEM CERTEZA QUE DESEJA EXCLUIR ESTE REGISTRO?')">Apagar</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <!-- Incluir a paginação -->
+        {{> _pagination}}
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

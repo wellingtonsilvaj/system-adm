@@ -1,0 +1,30 @@
+<!-- Início da paginação -->
+<div class="content-pagination">
+    <div class="pagination">
+        <!-- Link para redirecionar para primeira página -->
+        {{#if pagination.page}}
+        <a href="{{pagination.path}}?page=1">&laquo;</a>
+        {{/if}}
+
+        <!-- Link para redirecionar para página anterior a atual -->
+        {{#if pagination.prev_page_url}}
+        <a href="{{pagination.path}}?page={{pagination.prev_page_url}}">{{pagination.prev_page_url}}</a>
+        {{/if}}
+
+        <!-- Link para apresentar o número da página atual -->
+        {{#if pagination.page}}
+        <a href="#" class="active">{{pagination.page}}</a>
+        {{/if}}
+
+        <!-- Link para redirecionar para próxima página em relação a atual -->
+        {{#if pagination.next_page_url}}
+        <a href="{{pagination.path}}?page={{pagination.next_page_url}}">{{pagination.next_page_url}}</a>
+        {{/if}}
+
+        <!-- Link para redirecionar para última página -->
+        {{#if pagination.lastPage}}
+        <a href="{{pagination.path}}?page={{pagination.lastPage}}">&raquo;</a>
+        {{/if}}
+    </div>
+</div>
+<!-- Fim da paginação -->
